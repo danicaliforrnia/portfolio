@@ -581,16 +581,6 @@ input[type='checkbox'] {
 /*************************/
 /*     02. Preloader     */
 /*************************/
-.spinner-wrapper {
-  position: fixed;
-  z-index: 999999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #2f2c3d;
-}
-
 .spinner {
   position: absolute;
   top: 50%; /* centers the loading animation vertically one the screen */
@@ -648,15 +638,15 @@ input[type='checkbox'] {
 /*     03. Navigation     */
 /**************************/
 .navbar-custom {
-  background-color: #4633af;
+  background-color: $primary-green-color;
   box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
   font: 700 0.75rem/2rem "Montserrat", sans-serif;
   transition: all 0.2s ease;
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-  width: 113px;
-  height: 34px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 1px;
   -webkit-backface-visibility: hidden;
 }
@@ -681,7 +671,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
-  color: #00c9db;
+  color: $primary-orange-color;
 }
 
 /* Dropdown Menu */
@@ -709,7 +699,7 @@ input[type='checkbox'] {
   margin-top: 0;
   border: none;
   border-radius: 0.25rem;
-  background-color: #4633af;
+  background-color: $primary-green-color;
 }
 
 .navbar-custom .dropdown-item {
@@ -718,7 +708,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover {
-  background-color: #4633af;
+  background-color: $primary-green-color;
 }
 
 .navbar-custom .dropdown-item .item-text {
@@ -772,7 +762,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-  background: linear-gradient(to bottom right, rgba(72, 72, 212, 0), rgba(241, 104, 104, 0)), url('../static/images/header-background.jpg') center center no-repeat;
+  background-image: linear-gradient(to bottom, #5cd89f, #8bc660, #b8ad29, #e18b18, #ff5c3e);
   background-size: cover;
 }
 
@@ -803,24 +793,24 @@ input[type='checkbox'] {
   margin-bottom: 1.25rem;
 }
 
-$redColor: rgba(244, 67, 54, 1);
-$blueColor: rgba(33, 150, 243, 1);
-
 .flex-center {
   width: 100%;
+  display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  justify-content: center;
 }
 
 .icon-3d {
+  text-decoration: none;
   padding: 10px;
   -webkit-animation: icon3d 200ms 10;
   animation: icon3d 200ms 10;
   color: #fff;
 
   &:hover {
+    text-decoration: none;
     -webkit-animation: icon3d 200ms infinite;
     animation: icon3d 200ms infinite;
   }
@@ -828,23 +818,23 @@ $blueColor: rgba(33, 150, 243, 1);
 
 @keyframes icon3d {
   0% {
-    text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+    text-shadow: 5px 4px $primary-green-color, -5px -6px $primary-orange-color;
   }
 
   25% {
-    text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+    text-shadow: -5px -6px $primary-green-color, 5px 4px $primary-orange-color;
   }
 
   50% {
-    text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+    text-shadow: 5px -4px $primary-green-color, -8px 4px $primary-orange-color;
   }
 
   75% {
-    text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+    text-shadow: -8px -4px $primary-green-color, -5px -4px $primary-orange-color;
   }
 
   100% {
-    text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
+    text-shadow: -5px 0 $primary-green-color, 5px -4px $primary-orange-color;
   }
 }
 
@@ -1623,19 +1613,20 @@ a:hover.back-to-top {
   }
 
   .navbar-custom .nav-item .nav-link {
+    text-transform: uppercase;
     padding: 0.25rem 0.75rem 0.25rem 0.75rem;
     color: #fff;
   }
 
   .navbar-custom .nav-item .nav-link:hover,
   .navbar-custom .nav-item .nav-link.active {
-    color: #00c9db;
+    color: $primary-orange-color;
   }
 
   .navbar-custom.top-nav-collapse {
     padding: 0.5rem 1.5rem 0.5rem 2rem;
     box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-    background-color: #4633af;
+    background-color: $primary-green-color;
   }
 
   .navbar-custom.top-nav-collapse .navbar-brand.logo-text {
@@ -1648,7 +1639,7 @@ a:hover.back-to-top {
 
   .navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
   .navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-    color: #00c9db;
+    color: $primary-orange-color;
   }
 
   .navbar-custom .dropdown-menu {
@@ -1796,7 +1787,6 @@ a:hover.back-to-top {
 }
 
 /* end of min-width width 768px */
-
 
 /* Min-width width 992px */
 @media (min-width: 992px) {
@@ -1999,7 +1989,6 @@ a:hover.back-to-top {
 
 /* end of min-width width 992px */
 
-
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
 
@@ -2032,6 +2021,9 @@ a:hover.back-to-top {
   }
   /* end of header */
 
+  .flex-center {
+    justify-content: flex-start;
+  }
 
   /* Features */
   .tabs {

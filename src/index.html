@@ -23,7 +23,8 @@
 <body data-spy="scroll" data-target=".fixed-top">
 
 <!-- Preloader -->
-<div class="spinner-wrapper">
+<div class="spinner-wrapper"
+     style="  position: fixed; z-index: 999999; top: 0; right: 0; bottom: 0; left: 0; background: #121212;">
     <div class="spinner">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
@@ -38,7 +39,7 @@
     <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
     <!-- Image Logo -->
-    <a class="navbar-brand logo-image" href="index.html"><img alt="alternative" src="static/images/logo.svg"></a>
+    <!--<a class="navbar-brand logo-image" href="index.html"><img alt="alternative" src="static/images/logo.png"></a>-->
 
     <!-- Mobile Menu Toggle Button -->
     <button aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"
@@ -52,14 +53,21 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll" href="#header">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#features">FEATURES</a>
+                <a class="nav-link page-scroll" href="#features">Sobre mí</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#preview">PREVIEW</a>
+                <a class="nav-link page-scroll" href="#preview">Habilidades</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#preview">proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#preview">Contáctame</a>
+            </li>
+        </ul>
     </div>
 </nav> <!-- end of navbar -->
 <!-- end of navigation -->
@@ -73,13 +81,13 @@
                     <div class="text-container">
                         <h3>Hola, soy</h3>
                         <h1>Daniel Stefanelli</h1>
-                        <p class="p-large">Ingeniero de telecomunicaciones y desarrollador full stack de aplicaciones.
+                        <p class="p-large">Ingeniero de Telecomunicaciones y desarrollador full stack de aplicaciones.
                             ¡Hagamos tus proyectos realidad!</p>
                         <div class="flex-center">
-                            <i class="fab fa-github fa-4x icon-3d"></i>
-                            <i class="fab fa-gitlab fa-4x icon-3d"></i>
-                            <i class="fab fa-bitbucket fa-4x icon-3d"></i>
-                            <i class="fab fa-git fa-4x icon-3d"></i>
+                            <a class="fab fa-github fa-4x icon-3d"
+                               href="https://www.linkedin.com/in/daniel-stefanelli/"></a>
+                            <a class="fab fa-linkedin fa-4x icon-3d"
+                               href="https://www.linkedin.com/in/daniel-stefanelli/"></a>
                         </div>
                     </div>
                 </div> <!-- end of col -->

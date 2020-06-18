@@ -16,6 +16,7 @@
     "start:dev": "webpack-dev-server --config webpack.config.dev.js",
     "start": "webpack --config webpack.config.prod.js && http-server ./dist -o",
     "build": "webpack --config webpack.config.prod.js",
+    "deploy": "gh-pages -d dist",
     "lint:js": "./node_modules/.bin/eslint src/js/*.js",
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "lint:html": "pa11y-ci ./src/**/*.html"
@@ -31,20 +32,17 @@
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.7.4",
+    "autoprefixer": "^9.1.5",
     "babel-loader": "^8.1.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
-    "autoprefixer": "^9.1.5",
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.20.2",
     "file-loader": "^5.0.2",
+    "gh-pages": "^3.0.0",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^3.0.0",
     "http-server": "^0.12.1",
@@ -56,6 +54,10 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.0.1",
     "stylelint": "^13.2.0",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint-config-standard": "^19.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   }
 }

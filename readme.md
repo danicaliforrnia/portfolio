@@ -1,3 +1,5 @@
+#Portfolio
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -16,8 +18,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a webpack boilerplate to create static websites. It includes Boostrap, 
-JQuery and fontawesome packages.
+This is my personal portfolio, use it as you like.
 
 ### Built With
 This template is built with:
@@ -38,7 +39,7 @@ You will need the Node.js Package Manager (npm) to use this boilerplate.
 1. Clone the repo
 
 ```sh
-git clone https://github.com/danicaliforrnia/webpack-boilerplate.git
+git clone https://github.com/danicaliforrnia/portfolio.git
 ```
 
 2. Install NPM packages

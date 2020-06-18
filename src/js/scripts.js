@@ -1,21 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
 
-/* Preloader */
-$(window).on('load', () => {
-    const preloaderFadeOutTime = 500;
-
-    function hidePreloader() {
-        const preloader = $('.spinner-wrapper');
-        setTimeout(() => {
-            preloader.fadeOut(preloaderFadeOutTime);
-        }, 500);
-    }
-
-    hidePreloader();
-});
-
-
 /* Navbar Scripts */
 // jQuery to collapse the navbar on scroll
 $(window).on('scroll load', () => {

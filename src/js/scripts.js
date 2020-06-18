@@ -9,17 +9,6 @@ $(window).on('scroll load', () => {
     }
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(() => {
-    $(document).on('click', 'a.page-scroll', function (event) {
-        const $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top,
-        }, 600, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-
 $('.navbar-nav li a').on('click', () => {
     if (!$(this).parent().hasClass('dropdown')) {
         $('.navbar-collapse').collapse('hide');
@@ -97,8 +86,8 @@ let a = 0;
 $(window).scroll(() => {
     if ($('#counter').length) {
         const oTop = $('#counter').offset().top - window.innerHeight;
-        if (a === 0 && $(window).scrollTop() > oTop) {
-            $('.counter-value').each(() => {
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
                 const $this = $(this);
                 const countTo = $this.attr('data-count');
                 $({
@@ -137,4 +126,16 @@ $(window).scroll(() => {
 
 $('.button, a, button').mouseup(() => {
     $(this).blur();
+});
+
+$('.nav-link').on('click', function (event) {
+    if (this.hash !== '') {
+        event.preventDefault();
+        var {hash} = this;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, () => {
+            window.location.hash = hash;
+        })
+    }
 });

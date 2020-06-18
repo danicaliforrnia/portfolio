@@ -134,9 +134,9 @@ a.white {
 .btn-solid-reg {
   display: inline-block;
   padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
-  border: 0.125rem solid #00c9db;
+  border: 0.125rem solid $primary-orange-color;
   border-radius: 2rem;
-  background-color: #00c9db;
+  background-color: $primary-orange-color;
   color: #fff;
   font: 700 0.75rem/0 "Montserrat", sans-serif;
   text-decoration: none;
@@ -145,7 +145,8 @@ a.white {
 
 .btn-solid-reg:hover {
   background-color: transparent;
-  color: #00c9db;
+  color: $primary-orange-color;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -671,7 +672,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
-  color: $primary-orange-color;
+  color: $background-color;
 }
 
 /* Dropdown Menu */
@@ -762,7 +763,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-  background-image: linear-gradient(to bottom, #5cd89f, #8bc660, #b8ad29, #e18b18, #ff5c3e);
+  background: url('../static/images/background.jpg') center no-repeat;
   background-size: cover;
 }
 
@@ -836,6 +837,17 @@ input[type='checkbox'] {
   100% {
     text-shadow: -5px 0 $primary-green-color, 5px -4px $primary-orange-color;
   }
+}
+
+
+.centered-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-image {
+  height: 300px;
 }
 
 /****************************/
@@ -1158,11 +1170,7 @@ input[type='checkbox'] {
 .basic-2 {
   padding-top: 8rem;
   padding-bottom: 3.5rem;
-  background-color: #262431;
-}
-
-.basic-2 img {
-  margin-bottom: 3.5rem;
+  background-color: $background-color;
 }
 
 .basic-2 h3 {
@@ -1183,6 +1191,10 @@ input[type='checkbox'] {
   background-color: #262431;
 }
 
+.basic-3 img {
+  max-width: 70%;
+}
+
 .basic-3 .text-container {
   margin-bottom: 3.5rem;
 }
@@ -1194,7 +1206,6 @@ input[type='checkbox'] {
 .basic-3 .btn-solid-reg {
   margin-top: 0.5rem;
 }
-
 
 /**********************************/
 /*     09. Details Lightboxes     */
@@ -1419,7 +1430,7 @@ input[type='checkbox'] {
 /**********************/
 .footer {
   padding-top: 5rem;
-  background-color: #262431;
+  background-color: $background-second-color;
 }
 
 .footer .footer-col {
@@ -1493,13 +1504,13 @@ a.back-to-top {
   width: 2.625rem;
   height: 2.625rem;
   border-radius: 1.875rem;
-  background: #00c9db url("../static/images/up-arrow.png") no-repeat center 47%;
+  background: $accent-yellow-color url("../static/images/up-arrow.png") no-repeat center 47%;
   background-size: 1.125rem 1.125rem;
   text-indent: -9999px;
 }
 
 a:hover.back-to-top {
-  background-color: #36edfd;
+  background-color: $primary-green-color;
 }
 
 
@@ -1620,7 +1631,7 @@ a:hover.back-to-top {
 
   .navbar-custom .nav-item .nav-link:hover,
   .navbar-custom .nav-item .nav-link.active {
-    color: $primary-orange-color;
+    color: $background-color;
   }
 
   .navbar-custom.top-nav-collapse {
@@ -1639,7 +1650,7 @@ a:hover.back-to-top {
 
   .navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
   .navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-    color: $primary-orange-color;
+    color: $background-color;
   }
 
   .navbar-custom .dropdown-menu {

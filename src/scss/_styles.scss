@@ -64,7 +64,7 @@ a:hover {
 }
 
 a.turquoise {
-  color: $primary-green-color;
+  color: $primary-color;
 }
 
 a.white {
@@ -74,9 +74,9 @@ a.white {
 .btn-solid-reg {
   display: inline-block;
   padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
-  border: 0.125rem solid $primary-orange-color;
+  border: 0.125rem solid $accent-color;
   border-radius: 2rem;
-  background-color: $primary-orange-color;
+  background-color: $accent-color;
   color: #fff;
   font: 700 0.75rem/0 "Montserrat", sans-serif;
   text-decoration: none;
@@ -85,7 +85,7 @@ a.white {
 
 .btn-solid-reg:hover {
   background-color: transparent;
-  color: $primary-orange-color;
+  color: $accent-color;
   cursor: pointer;
   text-decoration: none;
 }
@@ -93,9 +93,9 @@ a.white {
 .btn-solid-lg {
   display: inline-block;
   padding: 1.375rem 2.625rem 1.375rem 2.625rem;
-  border: 0.125rem solid $primary-orange-color;
+  border: 0.125rem solid $accent-color;
   border-radius: 2rem;
-  background-color: $primary-orange-color;
+  background-color: $accent-color;
   color: #fff;
   font: 700 0.75rem/0 "Montserrat", sans-serif;
   text-decoration: none;
@@ -104,7 +104,7 @@ a.white {
 
 .btn-solid-lg:hover {
   background-color: transparent;
-  color: $primary-orange-color;
+  color: $accent-color;
   text-decoration: none;
 }
 
@@ -122,17 +122,17 @@ a.white {
 .btn-outline-reg {
   display: inline-block;
   padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
-  border: 0.125rem solid $primary-orange-color;
+  border: 0.125rem solid $accent-color;
   border-radius: 2rem;
   background-color: transparent;
-  color: $primary-orange-color;
+  color: $accent-color;
   font: 700 0.75rem/0 "Montserrat", sans-serif;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-outline-reg:hover {
-  background-color: $primary-orange-color;
+  background-color: $accent-color;
   color: #fff;
   text-decoration: none;
 }
@@ -140,17 +140,17 @@ a.white {
 .btn-outline-lg {
   display: inline-block;
   padding: 1.375rem 2.625rem 1.375rem 2.625rem;
-  border: 0.125rem solid $primary-orange-color;
+  border: 0.125rem solid $accent-color;
   border-radius: 2rem;
   background-color: transparent;
-  color: $primary-orange-color;
+  color: $accent-color;
   font: 700 0.75rem/0 "Montserrat", sans-serif;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-outline-lg:hover {
-  background-color: $primary-orange-color;
+  background-color: $accent-color;
   color: #fff;
   text-decoration: none;
 }
@@ -158,17 +158,17 @@ a.white {
 .btn-outline-sm {
   display: inline-block;
   padding: 1rem 1.625rem 0.875rem 1.625rem;
-  border: 0.125rem solid $primary-orange-color;
+  border: 0.125rem solid $accent-color;
   border-radius: 2rem;
   background-color: transparent;
-  color: $primary-orange-color;
+  color: $accent-color;
   font: 700 0.625rem/0 "Montserrat", sans-serif;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-outline-sm:hover {
-  background-color: $primary-orange-color;
+  background-color: $accent-color;
   color: #fff;
   text-decoration: none;
 }
@@ -299,9 +299,9 @@ input[type='checkbox'] {
   display: inline-block;
   width: 100%;
   height: 3.125rem;
-  border: 1px solid $primary-orange-color;
+  border: 1px solid $accent-color;
   border-radius: 1.5rem;
-  background-color: $primary-orange-color;
+  background-color: $accent-color;
   color: #fff;
   font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
   cursor: pointer;
@@ -310,7 +310,7 @@ input[type='checkbox'] {
 
 .form-control-submit-button:hover {
   background-color: transparent;
-  color: $primary-orange-color;
+  color: $accent-color;
 }
 
 #cmsgSubmit.h3.text-center.tada.animated,
@@ -572,7 +572,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom {
-  background-color: $primary-green-color;
+  background-color: $primary-color;
   box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
   font: 700 0.75rem/2rem "Montserrat", sans-serif;
   transition: all 0.2s ease;
@@ -642,8 +642,24 @@ input[type='checkbox'] {
 }
 
 .header {
-  background: url('../static/images/background.jpg') center no-repeat;
-  background-size: cover;
+  background: linear-gradient(-45deg, #020024, #090979, #5c4ae4, #a946be);
+  background-size: 400% 400%;
+  -webkit-animation: gradientBG 10s ease infinite;
+  animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 .header .header-content {
@@ -694,23 +710,23 @@ input[type='checkbox'] {
 
 @keyframes icon3d {
   0% {
-    text-shadow: 5px 4px $primary-green-color, -5px -6px $primary-orange-color;
+    text-shadow: 5px 4px $primary-color, -5px -6px $accent-color;
   }
 
   25% {
-    text-shadow: -5px -6px $primary-green-color, 5px 4px $primary-orange-color;
+    text-shadow: -5px -6px $primary-color, 5px 4px $accent-color;
   }
 
   50% {
-    text-shadow: 5px -4px $primary-green-color, -8px 4px $primary-orange-color;
+    text-shadow: 5px -4px $primary-color, -8px 4px $accent-color;
   }
 
   75% {
-    text-shadow: -8px -4px $primary-green-color, -5px -4px $primary-orange-color;
+    text-shadow: -8px -4px $primary-color, -5px -4px $accent-color;
   }
 
   100% {
-    text-shadow: -5px 0 $primary-green-color, 5px -4px $primary-orange-color;
+    text-shadow: -5px 0 $primary-color, 5px -4px $accent-color;
   }
 }
 
@@ -905,7 +921,7 @@ input[type='checkbox'] {
 
 .counter #counter .counter-info {
   margin-bottom: 0;
-  color: #00c9db;
+  color: #fff;
   font: 400 0.875rem/1.25rem "Open Sans", sans-serif;
   vertical-align: middle;
 }
@@ -933,7 +949,7 @@ input[type='checkbox'] {
 .form .list-unstyled .fab {
   margin-right: 0.5rem;
   font-size: 0.875rem;
-  color: $primary-green-color;
+  color: $accent-color;
 }
 
 .form .list-unstyled .fa-phone {
@@ -954,7 +970,7 @@ input[type='checkbox'] {
 }
 
 .footer .list-unstyled .fas {
-  color: $primary-green-color;
+  color: $primary-color;
   font-size: 0.5rem;
   line-height: 1.375rem;
 }
@@ -984,7 +1000,7 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack:hover .fa-stack-2x {
-  color: $primary-green-color;
+  color: $primary-color;
 }
 
 a.back-to-top {
@@ -996,13 +1012,13 @@ a.back-to-top {
   width: 2.625rem;
   height: 2.625rem;
   border-radius: 1.875rem;
-  background: $accent-yellow-color url("../static/images/up-arrow.png") no-repeat center 47%;
+  background: $primary-color url("../static/images/up-arrow.png") no-repeat center 47%;
   background-size: 1.125rem 1.125rem;
   text-indent: -9999px;
 }
 
 a:hover.back-to-top {
-  background-color: $primary-green-color;
+  background-color: $primary-color;
 }
 
 @media (min-width: 768px) {
@@ -1044,7 +1060,7 @@ a:hover.back-to-top {
   .navbar-custom.top-nav-collapse {
     padding: 0.5rem 1.5rem 0.5rem 2rem;
     box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-    background-color: $primary-green-color;
+    background-color: $primary-color;
   }
 
   .navbar-custom.top-nav-collapse .navbar-brand.logo-text {

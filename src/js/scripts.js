@@ -1,8 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
 
-/* Navbar Scripts */
-// jQuery to collapse the navbar on scroll
 $(window).on('scroll load', () => {
     if ($('.navbar').offset().top > 20) {
         $('.fixed-top').addClass('top-nav-collapse');
@@ -22,15 +20,14 @@ $(() => {
     });
 });
 
-// closes the responsive menu on menu item click
-$('.navbar-nav li a').on('click', function (event) {
+$('.navbar-nav li a').on('click', () => {
     if (!$(this).parent().hasClass('dropdown')) {
         $('.navbar-collapse').collapse('hide');
     }
 });
 
 /* Card Slider - Swiper */
-const cardSlider = new Swiper('.card-slider', {
+new Swiper('.card-slider', {
     autoplay: {
         delay: 4000,
         disableOnInteraction: false,
@@ -55,7 +52,7 @@ const cardSlider = new Swiper('.card-slider', {
 });
 
 /* Image Slider - Swiper */
-const imageSlider = new Swiper('.image-slider', {
+new Swiper('.image-slider', {
     autoplay: {
         delay: 2000,
         disableOnInteraction: false,
@@ -96,14 +93,12 @@ const imageSlider = new Swiper('.image-slider', {
     },
 });
 
-
-/* Counter - CountTo */
 let a = 0;
 $(window).scroll(() => {
-    if ($('#counter').length) { // checking if CountTo section exists in the page, if not it will not run the script and avoid errors
+    if ($('#counter').length) {
         const oTop = $('#counter').offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-            $('.counter-value').each(function () {
+        if (a === 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(() => {
                 const $this = $(this);
                 const countTo = $this.attr('data-count');
                 $({
@@ -128,10 +123,10 @@ $(window).scroll(() => {
     }
 });
 
-/* Back To Top Button */
-// create the back to top button
 $('body').prepend('<a href="#header" class="back-to-top page-scroll">Back to Top</a>');
+
 const amountScrolled = 700;
+
 $(window).scroll(() => {
     if ($(window).scrollTop() > amountScrolled) {
         $('a.back-to-top').fadeIn('500');
@@ -140,8 +135,6 @@ $(window).scroll(() => {
     }
 });
 
-
-/* Removes Long Focus On Buttons */
-$('.button, a, button').mouseup(function () {
+$('.button, a, button').mouseup(() => {
     $(this).blur();
 });

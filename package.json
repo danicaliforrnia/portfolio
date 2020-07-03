@@ -1,14 +1,15 @@
 {
-  "name": "weback-boilerplate",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Boilerplate for web pages using webpack",
+  "description": "professional portfolio",
   "main": "index.js",
   "keywords": [
     "webpack",
     "websites",
     "bootstrap",
     "jquery",
-    "javascript"
+    "javascript",
+    "portfolio"
   ],
   "author": "Daniel Stefanelli",
   "license": "ISC",

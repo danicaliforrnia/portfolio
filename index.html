@@ -287,17 +287,17 @@
                 <!-- Contact Form -->
                 <form data-focus="false" data-toggle="validator" id="contactForm">
                     <div class="form-group">
-                        <input class="form-control-input" id="cname" required type="text">
+                        <input class="form-control-input" disabled id="cname" required type="text">
                         <label class="label-control" for="cname">Nombre</label>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <input class="form-control-input" id="cemail" required type="email">
+                        <input class="form-control-input" disabled id="cemail" required type="email">
                         <label class="label-control" for="cemail">Correo electrónico</label>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control-textarea" id="cmessage" required></textarea>
+                        <textarea class="form-control-textarea" disabled id="cmessage" required></textarea>
                         <label class="label-control" for="cmessage">Tu mensaje</label>
                         <div class="help-block with-errors"></div>
                     </div>
@@ -309,7 +309,7 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <button class="form-control-submit-button" type="submit">Enviar mensaje</button>
+                        <button class="form-control-submit-button" disabled type="submit">Enviar mensaje</button>
                     </div>
                     <div class="form-message">
                         <div class="h3 text-center hidden" id="cmsgSubmit"></div>
@@ -340,7 +340,8 @@
                         <li class="media">
                             <i class="fas fa-square"></i>
                             <div class="media-body">Mi curriculum vitae aquí
-                                <a class="turquoise" href="#your-link">www.danielstefanelli.com/CV</a>
+                                <a class="turquoise" href="static/files/CV-Daniel-Stefanelli.pdf">
+                                    CV</a>
                             </div>
                         </li>
                         <li class="media">

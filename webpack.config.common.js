@@ -60,6 +60,12 @@ module.exports = {
                 to: './static/',
             },
         ]),
+        new CopyWebpackPlugin([
+            {
+                from: './CNAME',
+                to: './',
+            },
+        ]),
         ...generateHTMLPlugins()
     ],
     stats: {

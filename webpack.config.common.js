@@ -5,71 +5,77 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
-    dir => new HTMLWebpackPlugin({
-        filename: path.basename(dir),
-        template: dir,
-    }),
+  dir => new HTMLWebpackPlugin({
+    filename: path.basename(dir),
+    template: dir,
+  }),
 );
 
 module.exports = {
-    node: {
-        fs: 'empty',
-    },
-    entry: ['./src/js/index.js', './src/scss/index.scss'],
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.js',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
+  node: {
+    fs: 'empty',
+  },
+  entry: ['./src/js/index.js', './src/scss/index.scss'],
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'app.bundle.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw-loader',
+      },
+      {
+        test: /\.(pdf|gif|png|jpe?g|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'static/',
             },
-            {
-                test: /\.html$/,
-                loader: 'raw-loader',
-            },
-            {
-                test: /\.(pdf|gif|png|jpe?g|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            outputPath: 'static/',
-                        },
-                    },
-                ],
-            },
-            {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'fonts/',
-                    },
-                }],
-            },
+          },
         ],
-    },
-    plugins: [
-        new CopyWebpackPlugin([
-            {
-                from: './src/static/',
-                to: './static/',
-            },
-        ]),
-        new CopyWebpackPlugin([
-            {
-                from: './CNAME',
-                to: './',
-            },
-        ]),
-        ...generateHTMLPlugins()
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+          },
+        }],
+      },
     ],
-    stats: {
-        colors: true,
-    },
-    devtool: 'source-map',
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: './src/static/',
+        to: './static/',
+      },
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: './CNAME',
+        to: './',
+      },
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: './src/locales/',
+        to: './locales/',
+      },
+    ]),
+    ...generateHTMLPlugins(),
+  ],
+  stats: {
+    colors: true,
+  },
+  devtool: 'source-map',
 };

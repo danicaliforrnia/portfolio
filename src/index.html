@@ -4,10 +4,9 @@
     <title>Daniel Stefaneli</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta content="landing page with boostrap, JQuery, fontawesome and more"
+    <meta content="landing page with Bootstrap, JQuery, fontawesome and more"
           name="description">
     <meta content="Daniel Stefanelli" name="author">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
     <link href="static/images/favicon.png" rel="icon">
@@ -27,7 +26,6 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-    <!-- Text Logo - Use this if you don't have a graphic logo -->
     <a class="navbar-brand logo-text page-scroll" href="index.html">Daniel Stefanelli</a>
 
     <!-- Mobile Menu Toggle Button -->
@@ -39,25 +37,37 @@
     </button>
     <!-- end of mobile menu toggle button -->
 
+    <!-- Nav options -->
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#header">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll" href="#header"
+                   id="home-nav">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#about-me">Sobre mí</a>
+                <a class="nav-link page-scroll" href="#about-me"
+                   id="about-me-nav">Sobre mí</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#services">Servicios</a>
+                <a class="nav-link page-scroll" href="#services"
+                   id="services-nav">Servicios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#projects">Proyectoss</a>
+                <a class="nav-link page-scroll" href="#projects"
+                   id="projects-nav">Proyectos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="#contact">Contáctame</a>
+                <a class="nav-link page-scroll contact-me-nav" href="#contact">Contáctame</a>
+            </li>
+            <li class="language_select">
+                <a href="" id="languages">Idiomas</a>
+                <ul class="language_select_children">
+                    <li id="es" class="active">Español</li>
+                    <li id="en">Ingles</li>
+                </ul>
             </li>
         </ul>
-    </div>
+    </div><!-- Nav options  -->
 </nav> <!-- end of navbar -->
 <!-- end of navigation -->
 
@@ -68,17 +78,17 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h3>Hola, soy</h3>
+                        <h3 id="greeting">Hola, soy</h3>
                         <h1>Daniel Stefanelli</h1>
-                        <p class="p-large">Ingeniero de Telecomunicaciones y desarrollador full stack de aplicaciones.
-                            ¡Hagamos tus proyectos realidad!</p>
+                        <p class="p-large" id="header-text">Ingeniero de Telecomunicaciones y desarrollador full stack
+                            de aplicaciones. ¡Hagamos tus proyectos realidad!</p>
                         <div class="flex-center">
                             <a class="fab fa-github fa-4x icon-3d" href="https://github.com/danicaliforrnia/"
                                target="_blank"></a>
-                            <a class="fab fa-twitter fa-4x icon-3d" href="https://twitter.com/danicalifoornia/"
-                               target="_blank"></a>
                             <a class="fab fa-linkedin fa-4x icon-3d" target="_blank"
                                href="https://www.linkedin.com/in/daniel-stefanelli/"></a>
+                            <a class="fab fa-twitter fa-4x icon-3d" href="https://twitter.com/danicalifoornia/"
+                               target="_blank"></a>
                         </div>
                     </div>
                 </div> <!-- end of col -->
@@ -102,10 +112,14 @@
             </div> <!-- end of col -->
             <div class="col-lg-6">
                 <div class="text-container">
-                    <h3>¡Hola, soy Daniel Stefanelli!</h3>
-                    <p>Un ingeniero y desarrollador de aplicaciones en Valencia, Venezuela. Amante del conocimiento,
-                        las redes y la programación. Estoy aquí para hacer realidad tus ideas, ¡no hay límites!.</p>
-                    <a class="btn-solid-reg">¡Revisa mi CV!</a>
+                    <h3 id="know-me">¡Conóceme!</h3>
+                    <p id="know-me-text">Soy un ingeniero y desarrollador de aplicaciones en Valencia, Venezuela. Amante
+                        de la
+                        programación, las redes y la ciencia. Estoy aquí para hacer realidad tus ideas, ¡no hay
+                        límites!.</p>
+                    <a class="btn-solid-reg" href="static/files/CV-Daniel-Stefanelli.pdf" target="_blank"
+                       id="check-cv">¡Revisa mi
+                        CV!</a>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -122,15 +136,15 @@
             </div> <!-- end of col -->
             <div class="col-lg-6">
                 <div class="text-container">
-                    <h3>Ingeniería de requerimientos</h3>
-                    <p>Trabajo en conjunto con mis clientes para definir las necesidades de su negocio o de sus futuras
+                    <h3 id="requirement-engineering">Ingeniería de requerimientos</h3>
+                    <p id="requirement-engineering-text">
+                        Trabajo en conjunto con mis clientes para definir las necesidades de su negocio o de sus futuras
                         aplicaciones. Conmigo descubriras como pontenciar tu negocio.</p>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
-</div>
-<!-- end of services 1 -->
+</div><!-- end of services 1 -->
 
 <!-- services 2 -->
 <div class="basic-3">
@@ -142,8 +156,8 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h3>Desarrollo de aplicaciones</h3>
-                        <p>Desarrollo aplicaciones a la medida de sus necesidades.
+                        <h3 id="app-development">Desarrollo de aplicaciones</h3>
+                        <p id="app-development-text">Desarrollo aplicaciones a la medida de sus necesidades.
                             Empleo las tecnologías de mayor demanda y crecimiento actual:
                             Angular, React, React Native, Node Js, Spring Boot, .Net Core y más.</p>
                     </div> <!-- end of text-container -->
@@ -154,8 +168,7 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of second -->
-</div>
-<!-- end of services 2 -->
+</div><!-- end of services 2 -->
 
 <!-- services 3 -->
 <div class="basic-3">
@@ -166,16 +179,16 @@
             </div> <!-- end of col -->
             <div class="col-lg-6">
                 <div class="text-container">
-                    <h3>Despliegue de aplicaciones</h3>
-                    <p>Permitame encargame de la infraestructura. Una vez desarrolladas sus aplicaciones,
+                    <h3 id="app-deployment">Despliegue de aplicaciones</h3>
+                    <p id="app-deployment-text">Permitame encargame de la infraestructura. Una vez desarrolladas sus
+                        aplicaciones,
                         realizo los despligues en los servidores correspondiente junto a la configuración que ello
                         requiere.</p>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
-</div>
-<!-- end of services 3 -->
+</div><!-- end of services 3 -->
 
 <!-- projects -->
 <div class="slider-2" id="projects">
@@ -188,7 +201,7 @@
                         <div class="swiper-wrapper">
                             <!-- Slide -->
                             <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/ats.png">
+                                <a class="popup-link" data-effect="fadeIn">
                                     <img alt="alternative" class="img-fluid" src="static/images/ats.png">
                                 </a>
                             </div>
@@ -196,7 +209,7 @@
 
                             <!-- Slide -->
                             <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/netcom.png">
+                                <a class="popup-link" data-effect="fadeIn">
                                     <img alt="alternative" class="img-fluid" src="static/images/netcom.png">
                                 </a>
                             </div>
@@ -204,24 +217,8 @@
 
                             <!-- Slide -->
                             <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/includeVR.png">
+                                <a class="popup-link" data-effect="fadeIn">
                                     <img alt="alternative" class="img-fluid" src="static/images/includeVR.png">
-                                </a>
-                            </div>
-                            <!-- end of slide -->
-
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/credix.png">
-                                    <img alt="alternative" class="img-fluid" src="static/images/credix.png">
-                                </a>
-                            </div>
-                            <!-- end of slide -->
-
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/cofersa.png">
-                                    <img alt="alternative" class="img-fluid" src="static/images/cofersa.png">
                                 </a>
                             </div>
                             <!-- end of slide -->
@@ -240,8 +237,7 @@
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
-</div>
-<!-- end of projects -->
+</div><!-- end of projects -->
 
 <!-- Statistics -->
 <div class="counter">
@@ -252,20 +248,20 @@
                 <!-- Counter -->
                 <div id="counter">
                     <div class="cell">
-                        <div class="counter-value number-count" data-count="5">1</div>
-                        <p class="counter-info">Clientes contentos</p>
+                        <div class="counter-value number-count" data-count="3">1</div>
+                        <p class="counter-info" id="clients-counter">Clientes contentos</p>
                     </div>
                     <div class="cell">
-                        <div class="counter-value number-count" data-count="8">1</div>
-                        <p class="counter-info">Aplicaciones</p>
+                        <div class="counter-value number-count" data-count="3">1</div>
+                        <p class="counter-info" id="apps-counter">Aplicaciones</p>
                     </div>
                     <div class="cell">
                         <div class="counter-value number-count" data-count="7">1</div>
-                        <p class="counter-info">Tecnologías</p>
+                        <p class="counter-info" id="tech-counter">Tecnologías</p>
                     </div>
                     <div class="cell">
                         <div class="counter-value number-count" data-count="1000">1</div>
-                        <p class="counter-info">Tazas de café</p>
+                        <p class="counter-info" id="coffee-counter">Tazas de café</p>
                     </div>
                 </div>
                 <!-- end of counter -->
@@ -281,11 +277,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Contáctame</h2>
+                <h2 class="contact-me-nav">Contáctame</h2>
                 <ul class="list-unstyled li-space-lg">
-                    <li class="address">No dudes en llamarme o contactarme por los siguientes medios</li>
+                    <li class="address" id="contact-me-text">
+                        No dudes en llamarme o contactarme por los siguientes medios
+                    </li>
                     <li><i class="fas fa-map-marker-alt"></i>Naguanagua - Valencia, Venezuela</li>
-                    <li><i class="fas fa-phone"></i><a href="tel:003024630820">+58 0414 4015051</a></li>
+                    <li><i class="fas fa-phone"></i><a href="tel:003024630820">+58 414 401 50 51</a></li>
                     <li><i class="fas fa-envelope"></i><a href="mailto:daniel.stefanelli.h@gmail.com">
                         daniel.stefanelli.h@gmail.com</a>
                     </li>
@@ -298,29 +296,32 @@
                 <!-- Contact Form -->
                 <form data-focus="false" data-toggle="validator" id="contactForm">
                     <div class="form-group">
-                        <input class="form-control-input" id="cname" required type="text">
-                        <label class="label-control" for="cname">Nombre</label>
+                        <input class="form-control-input" disabled id="cname" required type="text">
+                        <label class="label-control" for="cname" id="name-label">Nombre</label>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <input class="form-control-input" id="cemail" required type="email">
-                        <label class="label-control" for="cemail">Correo electrónico</label>
+                        <input class="form-control-input" disabled id="cemail" required type="email">
+                        <label class="label-control" for="cemail" id="email-label">Correo electrónico</label>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                        <label class="label-control" for="cmessage">Tu mensaje</label>
+                        <textarea class="form-control-textarea" disabled id="cmessage" required></textarea>
+                        <label class="label-control" for="cmessage" id="message-label">Tu mensaje</label>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group checkbox">
-                        <input id="cterms" required type="checkbox" value="Agreed-to-Terms">He leído y aceptado las
-                        condiciones
-                        establecidas en <a href="privacy-policy.html">Política de privacidad</a> y <a
-                            href="terms-conditions.html">Términos y condiciones</a>
+                        <input required type="checkbox" value="Agreed-to-Terms">
+                        <span id="checkbox-label">He leído y aceptado las condiciones establecidas en</span>
+                        <a href="privacy-policy.html" class="privacy">Política de privacidad</a>
+                        <span class="read-connector">y</span>
+                        <a href="terms-conditions.html" class="terms">Términos y condiciones</a>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <button class="form-control-submit-button" type="submit">Enviar mensaje</button>
+                        <button class="form-control-submit-button" disabled type="submit"
+                                id="submit">Enviar mensaje
+                        </button>
                     </div>
                     <div class="form-message">
                         <div class="h3 text-center hidden" id="cmsgSubmit"></div>
@@ -340,25 +341,28 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="footer-col">
-                    <h4>Ing. Daniel Stefanelli</h4>
-                    <p>Apasionado por crear las aplicaciones del mañana.</p>
+                    <h4 id="title-name">Ing. Daniel Stefanelli</h4>
+                    <p id="slogan">Apasionado por crear las aplicaciones del mañana.</p>
                 </div>
             </div> <!-- end of col -->
             <div class="col-md-4">
                 <div class="footer-col middle">
-                    <h4>Enlaces importantes</h4>
+                    <h4 id="links">Enlaces importantes</h4>
                     <ul class="list-unstyled li-space-lg">
                         <li class="media">
                             <i class="fas fa-square"></i>
-                            <div class="media-body">Mi curriculum vitae aquí
-                                <a class="turquoise" href="#your-link">www.danielstefanelli.com/CV</a>
+                            <div class="media-body"><span id="my-cv">Mi curriculum vitae aquí</span>
+                                <a href="static/files/CV-Daniel-Stefanelli.pdf">
+                                    CV</a>
                             </div>
                         </li>
                         <li class="media">
                             <i class="fas fa-square"></i>
-                            <div class="media-body">Lee las
-                                <a class="turquoise" href="#your-link">Políticas de privacidad</a> y los
-                                <a class="turquoise" href="#your-link">Términos y condiciones</a>
+                            <div class="media-body">
+                                <span id="read">Lee las</span>
+                                <a href="#your-link" class="privacy">Políticas de privacidad</a>
+                                <span class="read-connector">y los</span>
+                                <a href="#your-link" class="terms">Términos y condiciones</a>
                             </div>
                         </li>
                     </ul>
@@ -366,7 +370,7 @@
             </div> <!-- end of col -->
             <div class="col-md-4">
                 <div class="footer-col last">
-                    <h4>Redes sociales</h4>
+                    <h4 id="social-networks">Redes sociales</h4>
                     <span class="fa-stack">
                             <a href="https://github.com/danicaliforrnia/" target="_blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -374,15 +378,15 @@
                             </a>
                         </span>
                     <span class="fa-stack">
-                            <a href="https://twitter.com/danicalifoornia" target="_blank">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    <span class="fa-stack">
                             <a href="https://www.linkedin.com/in/daniel-stefanelli/" target="_blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="https://twitter.com/danicalifoornia" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
                             </a>
                         </span>
                 </div>

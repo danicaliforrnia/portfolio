@@ -62,18 +62,18 @@ $(window).scroll(() => {
         $({
           countNum: $this.text(),
         }).animate({
-              countNum: countTo,
-            },
-            {
-              duration: 2000,
-              easing: 'swing',
-              step() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete() {
-                $this.text(this.countNum);
-              },
-            });
+          countNum: countTo,
+        },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete() {
+            $this.text(this.countNum);
+          },
+        });
       });
       a = 1;
     }
@@ -99,7 +99,7 @@ $('.button, a, button').mouseup(() => {
 $('.nav-link').on('click', (event) => {
   if (this.hash !== '') {
     event.preventDefault();
-    const {hash} = this;
+    const { hash } = this;
     $('html, body').animate({
       scrollTop: $(hash).offset().top,
     }, 800, () => {

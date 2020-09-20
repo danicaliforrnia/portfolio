@@ -7,7 +7,6 @@
     <meta content="landing page with Bootstrap, JQuery, fontawesome and more"
           name="description">
     <meta content="Daniel Stefanelli" name="author">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
     <link href="static/images/favicon.png" rel="icon">
@@ -56,6 +55,13 @@
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="#contact">Contáctame</a>
             </li>
+            <li class="language_select">
+                <a href="">Idiomas</a>
+                <ul class="language_select_children">
+                    <li id="es">Espanol</li>
+                    <li id="en">Ingles</li>
+                </ul>
+            </li>
         </ul>
     </div><!-- Nav options  -->
 </nav> <!-- end of navbar -->
@@ -75,10 +81,10 @@
                         <div class="flex-center">
                             <a class="fab fa-github fa-4x icon-3d" href="https://github.com/danicaliforrnia/"
                                target="_blank"></a>
-                            <a class="fab fa-twitter fa-4x icon-3d" href="https://twitter.com/danicalifoornia/"
-                               target="_blank"></a>
                             <a class="fab fa-linkedin fa-4x icon-3d" target="_blank"
                                href="https://www.linkedin.com/in/daniel-stefanelli/"></a>
+                            <a class="fab fa-twitter fa-4x icon-3d" href="https://twitter.com/danicalifoornia/"
+                               target="_blank"></a>
                         </div>
                     </div>
                 </div> <!-- end of col -->
@@ -102,9 +108,9 @@
             </div> <!-- end of col -->
             <div class="col-lg-6">
                 <div class="text-container">
-                    <h3>¡Hola, soy Daniel Stefanelli!</h3>
-                    <p>Un ingeniero y desarrollador de aplicaciones en Valencia, Venezuela. Amante de la ciencia,
-                        las redes y la programación. Estoy aquí para hacer realidad tus ideas, ¡no hay límites!.</p>
+                    <h3>¡Conóceme!</h3>
+                    <p>Soy un ingeniero y desarrollador de aplicaciones en Valencia, Venezuela. Amante de la programación,
+                        las redes y la ciencia. Estoy aquí para hacer realidad tus ideas, ¡no hay límites!.</p>
                     <a class="btn-solid-reg" href="static/files/CV-Daniel-Stefanelli.pdf" target="_blank">¡Revisa mi
                         CV!</a>
                 </div> <!-- end of text-container -->
@@ -186,7 +192,7 @@
                         <div class="swiper-wrapper">
                             <!-- Slide -->
                             <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/ats.png">
+                                <a class="popup-link" data-effect="fadeIn">
                                     <img alt="alternative" class="img-fluid" src="static/images/ats.png">
                                 </a>
                             </div>
@@ -194,7 +200,7 @@
 
                             <!-- Slide -->
                             <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/netcom.png">
+                                <a class="popup-link" data-effect="fadeIn">
                                     <img alt="alternative" class="img-fluid" src="static/images/netcom.png">
                                 </a>
                             </div>
@@ -202,16 +208,8 @@
 
                             <!-- Slide -->
                             <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/includeVR.png">
+                                <a class="popup-link" data-effect="fadeIn">
                                     <img alt="alternative" class="img-fluid" src="static/images/includeVR.png">
-                                </a>
-                            </div>
-                            <!-- end of slide -->
-
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <a class="popup-link" data-effect="fadeIn" href="static/images/credix.png">
-                                    <img alt="alternative" class="img-fluid" src="static/images/credix.png">
                                 </a>
                             </div>
                             <!-- end of slide -->
@@ -241,11 +239,11 @@
                 <!-- Counter -->
                 <div id="counter">
                     <div class="cell">
-                        <div class="counter-value number-count" data-count="5">1</div>
+                        <div class="counter-value number-count" data-count="3">1</div>
                         <p class="counter-info">Clientes contentos</p>
                     </div>
                     <div class="cell">
-                        <div class="counter-value number-count" data-count="8">1</div>
+                        <div class="counter-value number-count" data-count="3">1</div>
                         <p class="counter-info">Aplicaciones</p>
                     </div>
                     <div class="cell">
@@ -274,7 +272,7 @@
                 <ul class="list-unstyled li-space-lg">
                     <li class="address">No dudes en llamarme o contactarme por los siguientes medios</li>
                     <li><i class="fas fa-map-marker-alt"></i>Naguanagua - Valencia, Venezuela</li>
-                    <li><i class="fas fa-phone"></i><a href="tel:003024630820">+58 0414 4015051</a></li>
+                    <li><i class="fas fa-phone"></i><a href="tel:003024630820">+58 414 401 50 51</a></li>
                     <li><i class="fas fa-envelope"></i><a href="mailto:daniel.stefanelli.h@gmail.com">
                         daniel.stefanelli.h@gmail.com</a>
                     </li>
@@ -340,15 +338,15 @@
                         <li class="media">
                             <i class="fas fa-square"></i>
                             <div class="media-body">Mi curriculum vitae aquí
-                                <a class="turquoise" href="static/files/CV-Daniel-Stefanelli.pdf">
+                                <a href="static/files/CV-Daniel-Stefanelli.pdf">
                                     CV</a>
                             </div>
                         </li>
                         <li class="media">
                             <i class="fas fa-square"></i>
                             <div class="media-body">Lee las
-                                <a class="turquoise" href="#your-link">Políticas de privacidad</a> y los
-                                <a class="turquoise" href="#your-link">Términos y condiciones</a>
+                                <a href="#your-link">Políticas de privacidad</a> y los
+                                <a href="#your-link">Términos y condiciones</a>
                             </div>
                         </li>
                     </ul>
@@ -364,15 +362,15 @@
                             </a>
                         </span>
                     <span class="fa-stack">
-                            <a href="https://twitter.com/danicalifoornia" target="_blank">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    <span class="fa-stack">
                             <a href="https://www.linkedin.com/in/daniel-stefanelli/" target="_blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="https://twitter.com/danicalifoornia" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
                             </a>
                         </span>
                 </div>

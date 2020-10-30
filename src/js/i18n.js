@@ -20,6 +20,9 @@ function changeText(resources) {
     $('#app-development-text').text(resources.appDevelopmentText);
     $('#app-deployment').text(resources.appDeployment);
     $('#app-deployment-text').text(resources.appDeploymentText);
+    $('#ats-text').text(resources.atsText);
+    $('#netcom-text').text(resources.netcomText);
+    $('.tecnologies-title').text(resources.technologiesTitle);
     $('#clients-counter').text(resources.clientsCounter);
     $('#projects-counter').text(resources.projectsCounter);
     $('#tech-counter').text(resources.techCounter);

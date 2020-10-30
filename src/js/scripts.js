@@ -57,7 +57,7 @@ $(window).scroll(() => {
   if ($('#counter').length) {
     const oTop = $('#counter').offset().top - window.innerHeight;
     if (a === 0 && $(window).scrollTop() > oTop) {
-      $('.counter-value').each(() => {
+      $('.counter-value').each(function() {
         const $this = $(this);
         const countTo = $this.attr('data-count');
         $({

@@ -19,7 +19,7 @@
   "appDeployment": "Applications deployment",
   "appDeploymentText": "Allow me to take in charge of the infrastructure. Once the applications are developed, I deploy them in the servers along with the configurations they need.",
   "clientsCounter": "Happy clients",
-  "appsCounter": "Applications",
+  "projectsCounter": "Projects",
   "techCounter": "Technologies",
   "coffeeCounter": "Cups of coffee",
   "contactMeText": "Don't doubt to call me or contact me through the next ways",

@@ -21,7 +21,7 @@ function changeText(resources) {
     $('#app-deployment').text(resources.appDeployment);
     $('#app-deployment-text').text(resources.appDeploymentText);
     $('#clients-counter').text(resources.clientsCounter);
-    $('#apps-counter').text(resources.appsCounter);
+    $('#projects-counter').text(resources.projectsCounter);
     $('#tech-counter').text(resources.techCounter);
     $('#coffee-counter').text(resources.coffeeCounter);
     $('#contact-me-text').text(resources.contactMeText);

@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
+import 'magnific-popup';
 
 $(window).on('scroll load', () => {
   if ($('.navbar').offset().top > 20) {
@@ -56,7 +57,7 @@ $(window).scroll(() => {
   if ($('#counter').length) {
     const oTop = $('#counter').offset().top - window.innerHeight;
     if (a === 0 && $(window).scrollTop() > oTop) {
-      $('.counter-value').each(function () {
+      $('.counter-value').each(function() {
         const $this = $(this);
         const countTo = $this.attr('data-count');
         $({
@@ -106,4 +107,17 @@ $('.nav-link').on('click', (event) => {
       window.location.hash = hash;
     });
   }
+});
+
+
+$('.popup-with-move-anim').magnificPopup({
+  type: 'inline',
+  fixedContentPos: false,
+  fixedBgPos: true,
+  overflowY: 'auto',
+  closeBtnInside: true,
+  preloader: false,
+  midClick: true,
+  removalDelay: 300,
+  mainClass: 'my-mfp-slide-bottom',
 });

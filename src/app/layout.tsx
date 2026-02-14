@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "Daniel Stefanelli | Senior Software Engineer",
     description: "Portfolio of Daniel Stefanelli, a Senior Software Engineer specializing in scalable microservices and high-performance web applications.",
+    icons: {
+        icon: "/logo/isotype.png",
+        apple: "/logo/isotype.png",
+    },
 };
 
 export default function RootLayout({

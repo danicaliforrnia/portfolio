@@ -78,7 +78,7 @@ export const siteContent = {
     ],
     contact: {
         email: "danielstefanellih@gmail.com",
-        linkedin: "https://www.linkedin.com/in/danielstefanelli",
+        linkedin: "https://www.linkedin.com/in/daniel-stefanelli/",
         github: "https://github.com/danicaliforrnia",
     },
     footer: {

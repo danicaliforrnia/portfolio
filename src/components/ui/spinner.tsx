@@ -28,7 +28,7 @@ export interface SpinnerProps
 const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
     ({className, size, ...props}, ref) => {
         return (
-            <div ref={ref} {...props}>
+            <div ref={ref} data-testid="spinner" {...props}>
                 <Loader2 className={cn(spinnerVariants({size}), className)}/>
             </div>
         )

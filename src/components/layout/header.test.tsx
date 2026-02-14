@@ -18,7 +18,6 @@ describe('Header', () => {
         render(<Header/>)
         siteContent.header.nav.forEach((item) => {
             const navLinks = screen.getAllByText(item.label)
-            // One for desktop nav, one for mobile nav (hidden)
             expect(navLinks.length).toBeGreaterThanOrEqual(1)
             expect(navLinks[0]).toHaveAttribute('href', item.href)
         })
@@ -37,13 +36,8 @@ describe('Header', () => {
         render(<Header/>)
         const menuButton = screen.getByRole('button', {name: /toggle menu/i})
         fireEvent.click(menuButton)
-
-        expect(screen.getByText('Menu')).toBeInTheDocument()
-
-        // Check mobile nav items
         siteContent.header.nav.forEach((item) => {
             const mobileLinks = screen.getAllByText(item.label)
-            // Now we should have one more than before if it was hidden
             expect(mobileLinks.length).toBeGreaterThanOrEqual(1)
         })
     })

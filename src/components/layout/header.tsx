@@ -39,11 +39,11 @@ export function Header() {
                         <NavigationMenuList>
                             {siteContent.header.nav.map((item) => (
                                 <NavigationMenuItem key={item.label}>
-                                    <Link href={item.href}>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                                        <Link href={item.href}>
                                             {item.label}
-                                        </NavigationMenuLink>
-                                    </Link>
+                                        </Link>
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
                             ))}
                         </NavigationMenuList>

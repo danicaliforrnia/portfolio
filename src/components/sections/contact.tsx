@@ -4,6 +4,7 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Label} from "@/components/ui/label";
 import {Github, Linkedin, Mail} from "lucide-react";
+import {CopyEmail} from "@/components/copy-email";
 
 export function Contact() {
     return (
@@ -28,10 +29,9 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <p className="font-medium">Email</p>
-                                    <a href={`mailto:${siteContent.contact.email}`}
-                                       className="text-muted-foreground hover:text-primary transition-colors">
+                                    <CopyEmail className="text-muted-foreground hover:text-primary transition-colors">
                                         {siteContent.contact.email}
-                                    </a>
+                                    </CopyEmail>
                                 </div>
                             </div>
 

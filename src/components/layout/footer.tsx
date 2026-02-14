@@ -1,6 +1,7 @@
 import {siteContent} from "@/data/content";
 import {Github, Linkedin, Mail} from "lucide-react";
 import Link from "next/link";
+import {CopyEmail} from "@/components/copy-email";
 
 export function Footer() {
     return (
@@ -31,13 +32,12 @@ export function Footer() {
                             <Linkedin className="h-5 w-5"/>
                             <span className="sr-only">LinkedIn</span>
                         </Link>
-                        <Link
-                            href={`mailto:${siteContent.contact.email}`}
+                        <CopyEmail
                             className="rounded-full bg-muted p-2 hover:bg-primary hover:text-primary-foreground transition-colors"
                         >
                             <Mail className="h-5 w-5"/>
                             <span className="sr-only">Email</span>
-                        </Link>
+                        </CopyEmail>
                     </div>
                 </div>
             </div>

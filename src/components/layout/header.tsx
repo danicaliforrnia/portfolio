@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import {useState} from "react";
 import Link from "next/link";
 import {siteContent} from "@/data/content";
 import {
@@ -11,12 +12,12 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {Button} from "@/components/ui/button";
-import {Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
+import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
 import {Menu} from "lucide-react";
 import Image from "next/image";
 
 export function Header() {
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <header
@@ -67,10 +68,8 @@ export function Header() {
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right">
-                            <SheetHeader>
-                                <SheetTitle className="text-left">Menu</SheetTitle>
-                            </SheetHeader>
-                            <nav className="flex flex-col gap-4 mt-8">
+
+                            <nav className="flex flex-col gap-4 p-6">
                                 {siteContent.header.nav.map((item) => (
                                     <Link
                                         key={item.label}

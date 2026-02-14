@@ -9,7 +9,7 @@ export function Footer() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                     <div className="flex flex-col items-center gap-2 md:items-start">
-                        <span className="text-xl font-bold">{siteContent.header.name}</span>
+                        <span className="text-xl font-bold text-primary">{siteContent.header.name}</span>
                         <p className="text-sm text-muted-foreground">{siteContent.footer.text}</p>
                     </div>
 

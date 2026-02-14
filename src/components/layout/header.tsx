@@ -39,7 +39,7 @@ export function Header() {
                         <NavigationMenuList>
                             {siteContent.header.nav.map((item) => (
                                 <NavigationMenuItem key={item.label}>
-                                    <Link href={item.href} legacyBehavior passHref>
+                                    <Link href={item.href}>
                                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                             {item.label}
                                         </NavigationMenuLink>

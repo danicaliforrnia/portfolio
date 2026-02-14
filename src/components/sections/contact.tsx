@@ -1,3 +1,5 @@
+"use client";
+
 import {siteContent} from "@/data/content";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -5,8 +7,48 @@ import {Textarea} from "@/components/ui/textarea";
 import {Label} from "@/components/ui/label";
 import {Github, Linkedin, Mail} from "lucide-react";
 import {CopyEmail} from "@/components/copy-email";
+import {SyntheticEvent, useState} from "react";
+import {Spinner} from "@/components/ui/spinner"
+import {toast} from "sonner";
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        const form = e.currentTarget;
+        const body = {
+            name: (form.elements.namedItem('name') as HTMLInputElement).value,
+            email: (form.elements.namedItem('email') as HTMLInputElement).value,
+            subject: (form.elements.namedItem('subject') as HTMLInputElement).value,
+            message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+        };
+
+        try {
+            const res = await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                body,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            );
+
+            if (res.status === 200) {
+                toast.success("Notification sent to Daniel! ☺️");
+                form.reset();
+            } else {
+                toast.error("Failed to notify Daniel! 😔");
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            toast.error("An error occurred. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section id="contact" className="py-20">
             <div className="container mx-auto px-4">
@@ -63,24 +105,45 @@ export function Contact() {
                         </div>
                     </div>
 
-                    <form className="space-y-4 p-6 bg-muted/30 rounded-xl border">
+                    <form onSubmit={handleSubmit} className="space-y-4 p-6 bg-muted/30 rounded-xl border">
                         <div className="grid gap-2">
                             <Label htmlFor="name">Name</Label>
-                            <Input id="name" placeholder="Your Name"/>
+                            <Input
+                                id="name"
+                                placeholder="Your Name"
+                                required
+                            />
                         </div>
                         <div className="grid gap-2">
                             <Label htmlFor="email">Email</Label>
-                            <Input id="email" type="email" placeholder="Your Email"/>
+                            <Input
+                                id="email"
+                                type="email"
+                                placeholder="Your Email"
+                                required
+                            />
                         </div>
                         <div className="grid gap-2">
                             <Label htmlFor="subject">Subject</Label>
-                            <Input id="subject" placeholder="Subject"/>
+                            <Input
+                                id="subject"
+                                placeholder="Subject"
+                                required
+                            />
                         </div>
                         <div className="grid gap-2">
                             <Label htmlFor="message">Message</Label>
-                            <Textarea id="message" placeholder="Your Message" className="min-h-37.5"/>
+                            <Textarea
+                                id="message"
+                                placeholder="Your Message"
+                                className="min-h-37.5"
+                                required
+                            />
                         </div>
-                        <Button className="w-full" type="submit">Send Message</Button>
+                        <Button className="w-full" type="submit" disabled={isSubmitting}>
+                            Send message
+                            {isSubmitting && <Spinner className="ml-2"/>}
+                        </Button>
                     </form>
                 </div>
             </div>

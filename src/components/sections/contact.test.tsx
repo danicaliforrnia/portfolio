@@ -31,9 +31,11 @@ describe('Contact', () => {
 
         const linkedinLink = screen.getByRole('link', {name: /indanielstefanelli/i})
         const githubLink = screen.getByRole('link', {name: /danicaliforrnia/i})
+        const mediumLink = screen.getByRole('link', {name: /Daniel Stefanelli/i})
 
         expect(linkedinLink).toHaveAttribute('href', siteContent.contact.linkedin)
         expect(githubLink).toHaveAttribute('href', siteContent.contact.github)
+        expect(mediumLink).toHaveAttribute('href', siteContent.contact.medium)
     })
 
     test('renders contact form fields', () => {

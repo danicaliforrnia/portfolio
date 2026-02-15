@@ -7,6 +7,7 @@ export const siteContent = {
             {label: "About", href: "#about"},
             {label: "Experience", href: "#experience"},
             {label: "Skills", href: "#skills"},
+            {label: "Blog", href: "#blog"},
             {label: "Contact", href: "#contact"},
         ],
     },
@@ -80,6 +81,7 @@ export const siteContent = {
         email: "danielstefanellih@gmail.com",
         linkedin: "https://www.linkedin.com/in/daniel-stefanelli/",
         github: "https://github.com/danicaliforrnia",
+        medium: "https://medium.com/@daniel.stefanelli.h",
     },
     footer: {
         text: "© 2026 Daniel Stefanelli. All rights reserved.",

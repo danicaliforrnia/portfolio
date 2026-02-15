@@ -5,7 +5,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Label} from "@/components/ui/label";
-import {Github, Linkedin, Mail} from "lucide-react";
+import {BookText, Github, Linkedin, Mail} from "lucide-react";
 import {CopyEmail} from "@/components/copy-email";
 import {SyntheticEvent, useState} from "react";
 import {Spinner} from "@/components/ui/spinner"
@@ -50,7 +50,7 @@ export function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20">
+        <section id="contact" className="py-20 bg-muted/30">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
 
@@ -102,10 +102,23 @@ export function Contact() {
                                     </a>
                                 </div>
                             </div>
+
+                            <div className="flex items-center gap-4">
+                                <div className="bg-primary/10 p-3 rounded-full">
+                                    <BookText className="h-6 w-6 text-primary"/>
+                                </div>
+                                <div>
+                                    <p className="font-medium">Medium</p>
+                                    <a href={siteContent.contact.medium} target="_blank" rel="noopener noreferrer"
+                                       className="text-muted-foreground hover:text-primary transition-colors">
+                                        Daniel Stefanelli
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-4 p-6 bg-muted/30 rounded-xl border">
+                    <form onSubmit={handleSubmit} className="space-y-4 p-6 bg-card rounded-xl border shadow-sm">
                         <div className="grid gap-2">
                             <Label htmlFor="name">Name</Label>
                             <Input

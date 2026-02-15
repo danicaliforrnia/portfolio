@@ -2,7 +2,6 @@ import {fireEvent, render, screen, waitFor} from '@testing-library/react'
 import {beforeEach, describe, expect, test, vi} from 'vitest'
 import {Blog} from './blog'
 
-// Mock fetch
 const mockFetch = vi.fn()
 global.fetch = mockFetch
 
@@ -88,7 +87,7 @@ describe('Blog', () => {
     })
 
     test('paginates blog posts with Load More button', async () => {
-        const mockPosts = Array.from({length: 5}, (_, i) => ({
+        const mockPosts = Array.from({length: 8}, (_, i) => ({
             title: `Post ${i + 1}`,
             pubDate: `2024-01-0${i + 1} 10:00:00`,
             link: `https://medium.com/post-${i + 1}`,
@@ -107,10 +106,13 @@ describe('Blog', () => {
             expect(screen.getByText('Post 1')).toBeInTheDocument()
             expect(screen.getByText('Post 2')).toBeInTheDocument()
             expect(screen.getByText('Post 3')).toBeInTheDocument()
+            expect(screen.queryByText('Post 4')).toBeInTheDocument()
+            expect(screen.queryByText('Post 5')).toBeInTheDocument()
+            expect(screen.queryByText('Post 6')).toBeInTheDocument()
         })
 
-        expect(screen.queryByText('Post 4')).not.toBeInTheDocument()
-        expect(screen.queryByText('Post 5')).not.toBeInTheDocument()
+        expect(screen.queryByText('Post 7')).not.toBeInTheDocument()
+        expect(screen.queryByText('Post 8')).not.toBeInTheDocument()
 
         const loadMoreButton = screen.getByRole('button', {name: /Load More Posts/i})
         expect(loadMoreButton).toBeInTheDocument()

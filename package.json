@@ -1,9 +1,14 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "node": ">=24.11.1"
+  },
+  "author": {
+    "email": "daniel.stefanelli.h@gmail.com",
+    "name": "Daniel Stefanelli",
+    "url": "https://danielstefanelli.com"
   },
   "scripts": {
     "dev": "next dev",
